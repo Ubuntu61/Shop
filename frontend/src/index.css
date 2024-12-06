@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+    --primary-color: #2488ff;
+    --secondary-color: #f77e2d;
+    --text-color: #2c3e50;
+    --light-gray: #f8f9fa;
+    --border-color: #eaeaea;
+    --success-color: #28a745;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+    --transition: all 0.3s ease;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffbf80; /* 或其他你想要的颜色 */
+    min-height: 100vh;
+}
+
+/* 通用样式增强 */
+.box {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: none;
+    padding: 1.5rem;
+}
+
+.box:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+}
+
+/* 产品卡片样式 */
+.sgl-product {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.sgl-product:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.sgl-product img {
+    transition: transform 0.5s ease;
+}
+
+.sgl-product:hover img {
+    transform: scale(1.05);
+}
+
+/* 产品信息样式 */
+.pro-name a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.pro-name a:hover {
+    color: var(--primary-color);
+}
+
+.pro-price {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--success-color);
+}
+
+/* 按钮样式 */
+.btn {
+    border-radius: 25px;
+    padding: 0.5rem 1.25rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: darken(var(--primary-color), 10%);
+    transform: translateY(-2px);
+}
+
+/* 标题样式 */
+.sub-heading {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--text-color);
+    border-left: 4px solid var(--secondary-color);
+    padding-left: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* 评分样式 */
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.rating span i {
+    color: #ffc107;
+}
+
+/* 导航栏样式 */
+.header-area .bg-light {
+    background: #ffffff !important;
+    box-shadow: var(--shadow-sm);
+}
+
+.navbar-brand img {
+    height: 50px;
+    transition: var(--transition);
+}
+
+/* 搜索框样式 */
+.search-box .form-control {
+    border-radius: 25px 0 0 25px;
+    border: 1px solid var(--border-color);
+    padding: 0.75rem 1.25rem;
+}
+
+.search-box .input-group-append button.btn {
+    border-radius: 0 25px 25px 0;
+    padding: 0.75rem 1.5rem;
+}
+
+/* 服务盒子样式 */
+.service-box {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    transition: var(--transition);
+}
+
+.service-box:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.service-icon i {
+    font-size: 2rem;
+    color: var(--secondary-color);
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .sub-heading {
+        font-size: 1.5rem;
+    }
+
+    .service-box {
+        margin-bottom: 1rem;
+    }
+}
+
+/* 购物车按钮样式 */
+.rating-box .btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}
+
+.rating-box .btn i {
+    font-size: 1rem;
+}
+
+/* 页脚样式 */
+footer {
+    background: #1a1a1a;
+    color: #ffffff;
+    padding: 3rem 0;
+}
+
+/* 加载动画 */
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid var(--border-color);
+    border-radius: 50%;
+    border-top-color: var(--primary-color);
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* 表格样式 */
+.table {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.table th {
+    background: var(--light-gray);
+    font-weight: 600;
+}
+
+/* 表单样式 */
+.form-control {
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    padding: 0.75rem 1rem;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(36, 136, 255, 0.15);
+}
+
+/* 卡片悬停效果 */
+.feature-card {
+    transform-origin: center;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: scale(1.02) translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
