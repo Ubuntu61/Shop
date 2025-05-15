@@ -145,6 +145,10 @@ const HomeScreen = ({ match }) => {
                           setSelectedCategory(e.target.value);
                           setCurrentPage(1);
                         }}
+                        style={{
+                          height: '60px', 
+                          lineHeight: 'normal', 
+                        }}
                       >
                         <option value="">All Categories</option>
                         <option value="desktops">desktops</option>
@@ -162,6 +166,10 @@ const HomeScreen = ({ match }) => {
                           setPriceRange(e.target.value);
                           setCurrentPage(1);
                         }}
+                        style={{
+                          height: '60px', 
+                          lineHeight: 'normal', 
+                        }}
                       >
                         <option value="all">All Prices</option>
                         <option value="under50">Under $50</option>
@@ -178,6 +186,10 @@ const HomeScreen = ({ match }) => {
                         onChange={(e) => {
                           setRatingFilter(e.target.value);
                           setCurrentPage(1);
+                        }}
+                        style={{
+                          height: '60px', 
+                          lineHeight: 'normal', 
                         }}
                       >
                         <option value="all">All Ratings</option>

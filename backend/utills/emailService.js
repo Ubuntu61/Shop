@@ -27,13 +27,11 @@ const sendOrderConfirmationEmail = async (order) => {
       .join("");
 
     const mailOptions = {
-      from: `"Shop Box" <${process.env.EMAIL_USER}>`,
+      from: `"Store" <${process.env.EMAIL_USER}>`,
       to: order.user.email,
       subject: `Order Confirmation - Order ${order._id}`,
       html: `
-        <h1>Thank you for your order!</h1>
-        <p>Your order ${order._id} has been confirmed and paid.</p>
-
+        <p>Your order ${order._id} has been confirmed.</p>
         <h2>Order Details:</h2>
         <table border="1" cellpadding="10" cellspacing="0">
           <tr>
@@ -44,11 +42,7 @@ const sendOrderConfirmationEmail = async (order) => {
           </tr>
           ${orderItemsHtml}
         </table>
-
         <h3>Order Summary:</h3>
-        <p>Subtotal: $${order.totalPrice - order.taxPrice - order.shippingPrice}</p>
-        <p>Tax: $${order.taxPrice}</p>
-        <p>Shipping: $${order.shippingPrice}</p>
         <p><strong>Total: $${order.totalPrice}</strong></p>
 
         <h3>Shipping Address:</h3>
@@ -58,8 +52,6 @@ const sendOrderConfirmationEmail = async (order) => {
           ${order.shippingAddress.postalCode}<br>
           ${order.shippingAddress.country}
         </p>
-
-        <p>Thank you for shopping with us!</p>
       `,
     };
 
