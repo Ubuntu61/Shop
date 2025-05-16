@@ -80,17 +80,4 @@ Monitor and update inventory levels
 View and manage customer orders
 Access stock tracking analytics
 
-👥 Team Members
 
-Bowen Gao (bgao57@uwo.ca)
-Jinnan Hu (jhu625@uwo.ca)
-Kai Wu (kwu387@uwo.ca)
-
-🔜 Future Enhancements
-
-Multi-language Support: Interface localization for global users
-Personalized Recommendation System: ML-based product suggestions
-Advanced Data Analytics: Enhanced inventory forecasting models
-Real Payment Gateway Integration: Beyond simulation
-Mobile App Development: Native mobile experience
-Enhanced Data Visualization: Richer charts and reports for admin
